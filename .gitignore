@@ -20,7 +20,7 @@ logs/
 *.sum
 *.http
 
-/samblog/samblog
+/samblog
 
 # macos
 .DS_Store
