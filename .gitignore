@@ -1,0 +1,26 @@
+# Created by .ignore support plugin (hsz.mobi)
+# 目录下的所有文件
+node_modules/
+.idea/
+test/
+.vscode/
+build/
+vendor/
+logs/
+.sass-cache/
+
+
+# macos/linux bin
+
+
+# 文件
+*.exe
+*.exe~
+*.log
+*.sum
+*.http
+
+/samblog/samblog
+
+# macos
+.DS_Store
