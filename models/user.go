@@ -13,3 +13,8 @@ type User struct {
 	UserState enum.CommonState `json:"user_state" gorm:"column:user_state"`
 	DateTime
 }
+
+// TableName
+func (*User) TableName() string {
+	return "tbl_user"
+}

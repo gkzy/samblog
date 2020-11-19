@@ -1,9 +1,12 @@
+/*
+前端handler
+*/
+
 package handler
 
 import (
 	"github.com/gkzy/gow"
 )
-
 
 // IndexHandler
 func IndexHandler(c *gow.Context) {
@@ -19,18 +22,17 @@ func ArticleDetail(c *gow.Context) {
 	c.HTML("article_detail.html")
 }
 
-
 // Archive
-func Archive(c *gow.Context){
+func Archive(c *gow.Context) {
 	c.HTML("archive.html")
 }
 
 // ArchiveMonth
-func ArchiveMonth(c *gow.Context){
+func ArchiveMonth(c *gow.Context) {
 	c.HTML("archive_month.html")
 }
 
 // ArchiveUser
-func ArchiveUser(c *gow.Context){
+func ArchiveUser(c *gow.Context) {
 	c.HTML("archive_user.html")
 }
