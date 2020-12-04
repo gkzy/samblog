@@ -7,7 +7,6 @@ import (
 )
 
 func init() {
-	gow.InitConfig()
 	conn.InitLog()
 	conn.InitMySQL()
 

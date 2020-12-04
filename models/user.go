@@ -1,6 +1,9 @@
 package models
 
-import "github.com/gkzy/samblog/enum"
+import (
+	"github.com/gkzy/gow/lib/mysql"
+	"github.com/gkzy/samblog/enum"
+)
 
 // User 用户
 type User struct {
@@ -17,4 +20,17 @@ type User struct {
 // TableName
 func (*User) TableName() string {
 	return "tbl_user"
+}
+
+// GetUser
+func (m *User) GetUser(username string) error {
+	db := mysql.GetORM()
+	return db.Model(m).Where("username=?", username).First(&m).Error
+}
+
+// GetUserList
+func (m *User) GetUserList() (data []*Month, err error) {
+	db := mysql.GetORM()
+	err = db.Model(m).Find(&data).Error
+	return
 }

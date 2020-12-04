@@ -1,5 +1,7 @@
 package models
 
+import "github.com/gkzy/gow/lib/mysql"
+
 // Blog 信息
 type Blog struct {
 	Id          int    `gorm:"primary_key;column:id" json:"id"`       // id
@@ -12,4 +14,10 @@ type Blog struct {
 
 func (*Blog) TableName() string {
 	return "tbl_blog"
+}
+
+// Update
+func (m *Blog) Update(mp map[string]interface{}) error {
+	db := mysql.GetORM()
+	return db.Model(m).Updates(mp).Error
 }

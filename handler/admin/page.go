@@ -1,13 +1,13 @@
 /*
 admin page
- */
+*/
 package admin
 
-import gow "github.com/gkzy/gov"
+import "github.com/gkzy/gow"
 
 // Login 登录
 func Login(c *gow.Context) {
-
+	c.HTML("admin/login.html")
 }
 
 // Logout 退出

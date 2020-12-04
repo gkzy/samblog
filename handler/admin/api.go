@@ -4,7 +4,7 @@ admin api
 
 package admin
 
-import gow "github.com/gkzy/gov"
+import gow "github.com/gkzy/gow"
 
 // APIHandler api handler
 type APIHandler struct{}
