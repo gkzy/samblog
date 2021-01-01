@@ -9,7 +9,7 @@ import (
 )
 
 // IndexHandler
-func IndexHandler(c *gow.Context) {
+func Index(c *gow.Context) {
 	c.HTML("index.html")
 }
 

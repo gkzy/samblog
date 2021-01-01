@@ -31,7 +31,7 @@ func PageRouter(r *gow.Engine) {
 
 	r.Use(middleware.Version())
 
-	r.Any("/", handler.IndexHandler)
+	r.Any("/", handler.Index)
 	r.Any("/category", handler.Category)
 	r.Any("/category/{ename}", handler.ArticleList)
 	r.Any("/article-{id:int}.html", handler.ArticleDetail)
